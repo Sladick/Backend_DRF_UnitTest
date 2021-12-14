@@ -19,11 +19,13 @@ from django.urls import path, include
 from rest_framework.routers import SimpleRouter
 
 
-from store.views import BookViewSet, auth
+from store.views import BookViewSet, auth, UserBooksRelationView
 
 router = SimpleRouter()
 
+
 router.register(r'book', BookViewSet)
+router.register(r'book_relation', UserBooksRelationView)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('social_django.urls', namespace='social')),
