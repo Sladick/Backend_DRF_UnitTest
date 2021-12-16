@@ -56,7 +56,4 @@ class BookSerializersTestCase(TestCase):
                     },
                 ]
             }]
-        print(expected_data)
-        print('++++++++++++++++++++++++++++++')
-        print(data)
         self.assertEqual(expected_data, data)
